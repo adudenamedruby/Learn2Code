@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+<<<<<<< HEAD
     @State private var chequeAmount = 0.0
     @State private var numberOfPeople = 0
     @State private var tipPrecentage = 20
@@ -89,6 +90,14 @@ struct ContentView: View {
                 }
             }
         }
+=======
+    let students = ["Harry", "Hermione", "Ron"]
+    @State private var currentStudent = ""
+
+    var body: some View {
+        Text("hello wordz")
+            .padding()
+>>>>>>> e9536f9d19806c72baa31f92809bbbc4ba599a1d
     }
 }
 
