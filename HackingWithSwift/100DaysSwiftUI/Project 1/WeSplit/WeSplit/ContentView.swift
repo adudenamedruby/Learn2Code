@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    let students = ["Harry", "Hermione", "Ron"]
+    @State private var currentStudent = ""
+
     var body: some View {
-        Text("Hello, world!")
+        Text("hello wordz")
             .padding()
     }
 }
