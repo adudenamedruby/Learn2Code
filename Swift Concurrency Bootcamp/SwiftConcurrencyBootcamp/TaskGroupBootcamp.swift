@@ -16,7 +16,11 @@ class TaskGroupBootcampDataManager {
         async let fetchImage3 = await fetchImage(urlString: url)
         async let fetchImage4 = await fetchImage(urlString: url)
 
-        let (img1, img2, img3, img4) = await (try fetchImage1, try fetchImage2, try fetchImage3, try fetchImage4)
+        let (img1, img2, img3, img4) = await (
+            try fetchImage1,
+            try fetchImage2,
+            try fetchImage3,
+            try fetchImage4)
 
         return [img1, img2, img3, img4]
     }

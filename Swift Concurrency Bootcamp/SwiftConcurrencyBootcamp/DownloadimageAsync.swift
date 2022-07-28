@@ -21,6 +21,7 @@ class DownloadImageAsyncImageLoader {
         return image
     }
 
+    @available(*, renamed: "downloadWithEscaping()")
     func downloadWithEscaping(completion: @escaping (_ image: UIImage?, _ error: Error?) -> Void) {
 //    func downloadWithEscaping(completion: @escaping (Result<UIImage, Error>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -46,6 +47,22 @@ class DownloadImageAsyncImageLoader {
             completion(image, error)
         }.resume()
     }
+
+    func downloadWithEscaping() async throws -> UIImage {
+        return try await withCheckedThrowingContinuation { continuation in
+            downloadWithEscaping() { result, error in
+                if let error = error {
+                    continuation.resume(throwing: error)
+                    return
+                }
+                guard let result = result else {
+                    fatalError("Expected non-nil result 'result' for nil error")
+                }
+                continuation.resume(returning: result)
+            }
+        }
+    }
+
 
     func downloadWithAsync() async throws -> UIImage {
         do {

@@ -83,11 +83,11 @@ struct TaskBootcamp: View {
                     .frame(width: 200, height: 200)
             }
         }
-        .task {
-            // this cancel's automatically if exiting.
-            await viewModel.fetchImage()
-        }
-//        .onAppear {
+//        .task {
+//            // this cancel's automatically if exiting.
+//            await viewModel.fetchImage()
+//        }
+        .onAppear {
 //            Task {
 //                print(Thread.current)
 //                print(Task.currentPriority)
@@ -99,41 +99,41 @@ struct TaskBootcamp: View {
         //                await viewModel.fetchImage()
         //            }
 
-//            Task(priority: .high) {
-////                try? await Task.sleep(nanoseconds: 2_000_000_000)
-//                await Task.yield()
-//                print("low: \(Thread.current) & \(Task.currentPriority)")
-//            }
-//            Task(priority: .userInitiated) {
-//                print("userInitiated: \(Thread.current) & \(Task.currentPriority)")
-//            }
-//            Task(priority: .medium) {
-//                print("medium: \(Thread.current) & \(Task.currentPriority)")
-//            }
-//            Task(priority: .low) {
-//                print("low: \(Thread.current) & \(Task.currentPriority)")
-//            }
-//            Task(priority: .utility) {
-//                print("utility: \(Thread.current) & \(Task.currentPriority)")
-//            }
-//            Task(priority: .background) {
-//                print("background: \(Thread.current) & \(Task.currentPriority)")
-//            }
+            Task(priority: .high) {
+//                try? await Task.sleep(nanoseconds: 2_000_000_000)
+                await Task.yield()
+                print("high: \(Thread.current) & \(Task.currentPriority)")
+            }
+            Task(priority: .userInitiated) {
+                print("userInitiated: \(Thread.current) & \(Task.currentPriority)")
+            }
+            Task(priority: .medium) {
+                print("medium: \(Thread.current) & \(Task.currentPriority)")
+            }
+            Task(priority: .low) {
+                print("low: \(Thread.current) & \(Task.currentPriority)")
+            }
+            Task(priority: .utility) {
+                print("utility: \(Thread.current) & \(Task.currentPriority)")
+            }
+            Task(priority: .background) {
+                print("background: \(Thread.current) & \(Task.currentPriority)")
+            }
 
 //            Task(priority: .userInitiated) {
-//                print("userInitiated: \(Thread.current) & \(Task.currentPriority)")
+//                print("userInitiatedParent: \(Thread.current) & \(Task.currentPriority)")
 //
 //                // This task inherits the same priority as the parent
 //                Task {
-//                    print("userInitiated2: \(Thread.current) & \(Task.currentPriority)")
+//                    print("userInitiatedChild: \(Thread.current) & \(Task.currentPriority)")
 //                }
 //
 //                // This removes this Task's priority from the parent. Don't do it.
 //                Task.detached {
-//                    print("detached: \(Thread.current) & \(Task.currentPriority)")
+//                    print("detachedFromUsireInitiated: \(Thread.current) & \(Task.currentPriority)")
 //                }
 //            }
-//        }
+        }
 //        .onDisappear {
 //            fetchImageTask?.cancel()
 //        }

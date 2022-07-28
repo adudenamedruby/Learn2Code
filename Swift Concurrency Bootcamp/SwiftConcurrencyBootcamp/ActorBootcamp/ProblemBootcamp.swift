@@ -62,7 +62,14 @@ struct BrowseView: View {
 
     let manager = MyDataManager.shared
     @State private var text = ""
-    let timer = Timer.publish(every: 0.01, tolerance: nil, on: .main, in: .common, options: nil).autoconnect()
+    let timer = Timer
+        .publish(
+            every: 0.01,
+            tolerance: nil,
+            on: .main,
+            in: .common,
+            options: nil)
+        .autoconnect()
 
     var body: some View {
         ZStack {
