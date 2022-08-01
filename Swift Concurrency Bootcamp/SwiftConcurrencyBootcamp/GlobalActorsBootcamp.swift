@@ -9,6 +9,25 @@ import SwiftUI
 
 // Read the Global actor Apple Docs
 
+// Marking an entire class with an actor makes it
+@MainActor class AccountViewModel: ObservableObject {
+    @Published var userName = "Anonymous"
+    @Published var isAuthenticated = false
+}
+
+// You could talk about Actor like this as well:
+/*
+ Task {
+         await MainActor.run {
+             print("This is on the main actor.")
+         }
+     }
+ 
+ Task { @MainActor in
+         print("This is on the main actor.")
+     }
+ */
+
 @globalActor struct MyFirstGlobalActor {
 
     // Once this has been declared, we should NOT access `DataManager()` by itself

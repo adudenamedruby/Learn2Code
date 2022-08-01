@@ -34,6 +34,39 @@ actor MyDataManager3 {
         return "NEW DATA!"
     }
 }
+/*
+
+ IMPORTANT ACTOR STUFF
+ 1. Actors are created using the `actor` keyword. This is a concrete nominal
+ type in Swift, like structs, classes, and enums.
+
+ 2. Like classes, actors are reference types. This makes them useful for
+ sharing state in your program.
+
+ 3. They have many of the same features as classes: you can give them
+ properties, methods (async or otherwise), initializers, and subscripts,
+ they can conform to protocols, and they can be generic.
+
+ 4. Actors do not support inheritance, so they cannot have convenience
+ initializers, and do not support either `final` or `override`.
+
+ 5. All actors automatically conform to the `Actor` protocol, which no other
+ type can use. This allows you to write code restricted to work only
+ with actors.
+
+ 6. If you’re attempting to read a variable property or call a method on an
+ actor, and you’re doing it from outside the actor itself, you must do so
+ asynchronously using `await`.
+
+ 7. Automatically conform to the AnyObject protocol, and can therefore
+ conform to `Identifiable` without adding an explicit id property.
+
+ 8. Can have a deinitializer.
+
+ 9. Can execute only one method at a time, regardless of how they are
+ accessed.
+
+ */
 
 struct HomeView3: View {
 
