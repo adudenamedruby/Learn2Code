@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LimitedWIPPluginSettings">
+    <option name="doNotRevertTests" value="true" />
+    <option name="migratedFromOldLocation" value="true" />
+    <option name="tcrEnabled" value="true" />
+    <option name="watchdogEnabled" value="false" />
+  </component>
+</project>
