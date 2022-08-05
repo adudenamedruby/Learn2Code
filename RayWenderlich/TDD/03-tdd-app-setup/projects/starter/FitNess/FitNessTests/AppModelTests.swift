@@ -9,17 +9,27 @@ import XCTest
 
 class AppModelTests: XCTestCase {
 
-    func testAppModel_whenInitialized_isInNotStartedState() {
-        let sut = AppModel()
+    var sut: AppModel!
 
+    override func setUp() {
+        super.setUp()
+
+        sut = AppModel()
+    }
+
+    override func tearDown() {
+        sut = nil
+
+        super.tearDown()
+    }
+
+    func testAppModel_whenInitialized_isInNotStartedState() {
         let initialState = sut.appState
 
         XCTAssertEqual(initialState, AppState.notStarted)
     }
 
     func testAppModel_whenStarted_isInProgressState() {
-        let sut = AppModel()
-
         sut.start()
 
         let observedState = sut.appState
