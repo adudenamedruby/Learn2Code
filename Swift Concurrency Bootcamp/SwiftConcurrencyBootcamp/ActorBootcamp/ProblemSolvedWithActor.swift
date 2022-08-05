@@ -147,3 +147,7 @@ struct ActorBootcamp3_Previews: PreviewProvider {
         ActorBootcamp3()
     }
 }
+
+func print(from actor: isolated MyDataManager3) {
+    print(actor.data)
+}
