@@ -8,5 +8,5 @@ import XCTest
 @testable import FitNess
 
 class StepCountControllerTests: XCTestCase {
-    
+
 }

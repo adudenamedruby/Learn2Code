@@ -17,8 +17,8 @@
 		4CBCDEB72701426800E8992C /* StepCountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCDEB62701426800E8992C /* StepCountController.swift */; };
 		4CBCDEBC270142DF00E8992C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCDEBB270142DF00E8992C /* AppState.swift */; };
 		4CBCDEBE270142EE00E8992C /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCDEBD270142EE00E8992C /* AppModel.swift */; };
-		C82428241ABEA0FA8D18DDC6 /* AppModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8242F8C8159111139CFF61A /* AppModelTests.swift */; };
-		C8242F8B1F72459E8D0BC040 /* StepCountControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82422E382E3C46F4DC41F2E /* StepCountControllerTests.swift */; };
+		C82427462FE48C0A4B34FF21 /* AppModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8242AC0009134161E54BB14 /* AppModelTests.swift */; };
+		C8242914E85A0AB7D0C82DFC /* StepCountControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8242E54FD1A314CDAB18B51 /* StepCountControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,8 @@
 		4CBCDEB62701426800E8992C /* StepCountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountController.swift; sourceTree = "<group>"; };
 		4CBCDEBB270142DF00E8992C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4CBCDEBD270142EE00E8992C /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
-		C82422E382E3C46F4DC41F2E /* StepCountControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCountControllerTests.swift; sourceTree = "<group>"; };
-		C8242F8C8159111139CFF61A /* AppModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModelTests.swift; sourceTree = "<group>"; };
+		C8242AC0009134161E54BB14 /* AppModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModelTests.swift; sourceTree = "<group>"; };
+		C8242E54FD1A314CDAB18B51 /* StepCountControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCountControllerTests.swift; sourceTree = "<group>"; };
 		C85033B7289DDC5300D57271 /* FitNessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitNessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,11 +137,43 @@
 			path = "App Model";
 			sourceTree = "<group>";
 		};
+		C824245EACD5EEBD5E8BBD29 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				C8242AC0009134161E54BB14 /* AppModelTests.swift */,
+				C8242E54FD1A314CDAB18B51 /* StepCountControllerTests.swift */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		C8242AA6341EAA0154B6433E /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		C8242E0AB91F8329858158C3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C8242EC3AF4BAAA3E07C1F8A /* Helper Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Helper Extensions";
+			sourceTree = "<group>";
+		};
 		C85033B8289DDC5300D57271 /* FitNessTests */ = {
 			isa = PBXGroup;
 			children = (
-				C8242F8C8159111139CFF61A /* AppModelTests.swift */,
-				C82422E382E3C46F4DC41F2E /* StepCountControllerTests.swift */,
+				C824245EACD5EEBD5E8BBD29 /* Cases */,
+				C8242E0AB91F8329858158C3 /* Mocks */,
+				C8242AA6341EAA0154B6433E /* Helper Classes */,
+				C8242EC3AF4BAAA3E07C1F8A /* Helper Extensions */,
 			);
 			path = FitNessTests;
 			sourceTree = "<group>";
@@ -283,8 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C82428241ABEA0FA8D18DDC6 /* AppModelTests.swift in Sources */,
-				C8242F8B1F72459E8D0BC040 /* StepCountControllerTests.swift in Sources */,
+				C82427462FE48C0A4B34FF21 /* AppModelTests.swift in Sources */,
+				C8242914E85A0AB7D0C82DFC /* StepCountControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
