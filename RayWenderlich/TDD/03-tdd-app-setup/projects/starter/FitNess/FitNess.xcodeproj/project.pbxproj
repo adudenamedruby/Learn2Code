@@ -17,8 +17,8 @@
 		4CBCDEB72701426800E8992C /* StepCountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCDEB62701426800E8992C /* StepCountController.swift */; };
 		4CBCDEBC270142DF00E8992C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCDEBB270142DF00E8992C /* AppState.swift */; };
 		4CBCDEBE270142EE00E8992C /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCDEBD270142EE00E8992C /* AppModel.swift */; };
-		C82427462FE48C0A4B34FF21 /* AppModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8242AC0009134161E54BB14 /* AppModelTests.swift */; };
-		C8242914E85A0AB7D0C82DFC /* StepCountControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8242E54FD1A314CDAB18B51 /* StepCountControllerTests.swift */; };
+		C82429F6971105488BE058F2 /* AppModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8242113473332CDB6F3BC5D /* AppModelTests.swift */; };
+		C8242F5C390A3485864B5196 /* StepCountControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8242FB4A57FE762B3AB0342 /* StepCountControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,8 @@
 		4CBCDEB62701426800E8992C /* StepCountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountController.swift; sourceTree = "<group>"; };
 		4CBCDEBB270142DF00E8992C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4CBCDEBD270142EE00E8992C /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
-		C8242AC0009134161E54BB14 /* AppModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModelTests.swift; sourceTree = "<group>"; };
-		C8242E54FD1A314CDAB18B51 /* StepCountControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCountControllerTests.swift; sourceTree = "<group>"; };
+		C8242113473332CDB6F3BC5D /* AppModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModelTests.swift; sourceTree = "<group>"; };
+		C8242FB4A57FE762B3AB0342 /* StepCountControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCountControllerTests.swift; sourceTree = "<group>"; };
 		C85033B7289DDC5300D57271 /* FitNessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitNessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,8 +140,8 @@
 		C824245EACD5EEBD5E8BBD29 /* Cases */ = {
 			isa = PBXGroup;
 			children = (
-				C8242AC0009134161E54BB14 /* AppModelTests.swift */,
-				C8242E54FD1A314CDAB18B51 /* StepCountControllerTests.swift */,
+				C8242DCB6166CFA2C0D9C3F5 /* AppModel */,
+				C8242C3931FD689EA0052592 /* UI Layer */,
 			);
 			path = Cases;
 			sourceTree = "<group>";
@@ -151,6 +151,22 @@
 			children = (
 			);
 			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		C8242C3931FD689EA0052592 /* UI Layer */ = {
+			isa = PBXGroup;
+			children = (
+				C8242FB4A57FE762B3AB0342 /* StepCountControllerTests.swift */,
+			);
+			path = "UI Layer";
+			sourceTree = "<group>";
+		};
+		C8242DCB6166CFA2C0D9C3F5 /* AppModel */ = {
+			isa = PBXGroup;
+			children = (
+				C8242113473332CDB6F3BC5D /* AppModelTests.swift */,
+			);
+			path = AppModel;
 			sourceTree = "<group>";
 		};
 		C8242E0AB91F8329858158C3 /* Mocks */ = {
@@ -315,8 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C82427462FE48C0A4B34FF21 /* AppModelTests.swift in Sources */,
-				C8242914E85A0AB7D0C82DFC /* StepCountControllerTests.swift in Sources */,
+				C82429F6971105488BE058F2 /* AppModelTests.swift in Sources */,
+				C8242F5C390A3485864B5196 /* StepCountControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
