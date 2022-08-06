@@ -13,7 +13,7 @@ class AppModelTests: XCTestCase {
     var sut: AppModel!
 
     override func setUpWithError() throws {
-        super.setUp()
+        try super.setUpWithError()
 
         sut = AppModel()
     }
@@ -21,7 +21,7 @@ class AppModelTests: XCTestCase {
     override func tearDownWithError() throws {
         sut = nil
 
-        super.tearDown()
+        try super.tearDownWithError()
     }
 
     func testAppModel_whenInitialized_isInNotStartedState() {
