@@ -5,6 +5,7 @@
 
 import Foundation
 import XCTest
+
 @testable import FitNess
 
 class AppModelTests: XCTestCase {
