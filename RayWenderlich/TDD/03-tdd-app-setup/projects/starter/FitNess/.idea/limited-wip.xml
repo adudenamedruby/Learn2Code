@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="LimitedWIPPluginSettings">
-    <option name="doNotRevertTests" value="true" />
+    <option name="doNotRevertFiles" value="*Tests.swift" />
     <option name="maxLinesInChange" value="100" />
     <option name="migratedFromOldLocation" value="true" />
     <option name="tcrEnabled" value="true" />
