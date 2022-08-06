@@ -13,10 +13,18 @@ class StepCountControllerTests: XCTestCase {
 
     override func setUpWithError() throws {
         try super.setUpWithError()
+        sut = StepCountController()
     }
 
     override func tearDownWithError() throws {
-
+        sut = nil
         try super.tearDownWithError()
+    }
+
+    func testController_whenStartTapped_appIsInProgress() {
+        sut.startStopPause(nil)
+
+        let state = AppModel.instance.appState
+        XCTAssertEqual(state, AppState.inProgress)
     }
 }

@@ -33,7 +33,7 @@
 import Foundation
 
 public class AppModel {
-    public func paused() {
+    public func pause() {
         appState = .paused
     }
 

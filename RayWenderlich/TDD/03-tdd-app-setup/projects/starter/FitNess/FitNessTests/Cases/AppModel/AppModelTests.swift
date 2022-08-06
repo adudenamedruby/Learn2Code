@@ -38,7 +38,7 @@ class AppModelTests: XCTestCase {
     }
 
     func testAppModel_whenPaused_isPaused() {
-        sut.paused()
+        sut.pause()
 
         let observedState = sut.appState
         XCTAssertEqual(observedState, AppState.paused)
