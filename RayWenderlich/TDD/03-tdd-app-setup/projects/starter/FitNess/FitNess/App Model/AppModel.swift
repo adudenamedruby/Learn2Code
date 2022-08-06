@@ -33,17 +33,21 @@
 import Foundation
 
 public class AppModel {
-  static let instance = AppModel()
+    public func paused() {
+        appState = .paused
+    }
 
-  public var appState: AppState = .notStarted
+    static let instance = AppModel()
 
-  public init() {
+    public var appState: AppState = .notStarted
+
+    public init() {
 //    self.appState = .notStarted
-    let test1 = 454
-    print(test1)
-  }
+        let test1 = 454
+        print(test1)
+    }
 
-  public func start() {
-    appState = .inProgress
-  }
+    public func start() {
+        appState = .inProgress
+    }
 }
