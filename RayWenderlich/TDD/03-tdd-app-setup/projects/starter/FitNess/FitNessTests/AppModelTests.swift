@@ -12,13 +12,13 @@ class AppModelTests: XCTestCase {
 
     var sut: AppModel!
 
-    override func setUp() {
+    override func setUpWithError() throws {
         super.setUp()
 
         sut = AppModel()
     }
 
-    override func tearDown() {
+    override func tearDownWithError() throws {
         sut = nil
 
         super.tearDown()
