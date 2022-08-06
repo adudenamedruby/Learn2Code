@@ -9,12 +9,14 @@ import XCTest
 
 class StepCountControllerTests: XCTestCase {
 
+    var sut: StepCountController!
+
     override func setUpWithError() throws {
         try super.setUpWithError()
     }
 
     override func tearDownWithError() throws {
-        
+
         try super.tearDownWithError()
     }
 }
