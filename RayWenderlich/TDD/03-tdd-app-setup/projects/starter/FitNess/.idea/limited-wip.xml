@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="LimitedWIPPluginSettings">
+    <option name="commitMessageSource" value="ChangeListName" />
     <option name="doNotRevertFiles" value="*Tests.swift" />
     <option name="maxLinesInChange" value="100" />
     <option name="migratedFromOldLocation" value="true" />

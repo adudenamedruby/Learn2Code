@@ -46,4 +46,8 @@ public class AppModel {
   public func start() {
     appState = .inProgress
   }
+
+    public func paused() {
+        appState = .paused
+    }
 }
