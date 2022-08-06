@@ -18,6 +18,7 @@
 		4CBCDEBC270142DF00E8992C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCDEBB270142DF00E8992C /* AppState.swift */; };
 		4CBCDEBE270142EE00E8992C /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCDEBD270142EE00E8992C /* AppModel.swift */; };
 		C82428241ABEA0FA8D18DDC6 /* AppModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8242F8C8159111139CFF61A /* AppModelTests.swift */; };
+		C8242F8B1F72459E8D0BC040 /* StepCountControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82422E382E3C46F4DC41F2E /* StepCountControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		4CBCDEB62701426800E8992C /* StepCountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountController.swift; sourceTree = "<group>"; };
 		4CBCDEBB270142DF00E8992C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4CBCDEBD270142EE00E8992C /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		C82422E382E3C46F4DC41F2E /* StepCountControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCountControllerTests.swift; sourceTree = "<group>"; };
 		C8242F8C8159111139CFF61A /* AppModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModelTests.swift; sourceTree = "<group>"; };
 		C85033B7289DDC5300D57271 /* FitNessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitNessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				C8242F8C8159111139CFF61A /* AppModelTests.swift */,
+				C82422E382E3C46F4DC41F2E /* StepCountControllerTests.swift */,
 			);
 			path = FitNessTests;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C82428241ABEA0FA8D18DDC6 /* AppModelTests.swift in Sources */,
+				C8242F8B1F72459E8D0BC040 /* StepCountControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
