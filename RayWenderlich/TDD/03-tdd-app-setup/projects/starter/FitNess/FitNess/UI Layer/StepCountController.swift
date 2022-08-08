@@ -75,7 +75,7 @@ class StepCountController: UIViewController {
     }
 
     private func updateButton() {
-        let title = AppState.notStarted.nextStateButtonLabel
+        let title = AppModel.instance.appState.nextStateButtonLabel
         startButton.setTitle(title, for: .normal)
     }
 }
