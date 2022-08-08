@@ -40,6 +40,7 @@ class StepCountControllerTests: XCTestCase {
     }
 
     func testController_whenStartTapped_ButtonLabelIsPause() {
+        sut.viewDidLoad()
         sut.startStopPause(nil)
 
         let text = sut.startButton.title(for: .normal)
