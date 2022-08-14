@@ -1,4 +1,4 @@
-/// Copyright (c) 2021 Razeware LLC
+/// Copyright (c) 2022 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -30,16 +30,33 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import XCTest
 
-class AppModel {
-  static let instance = AppModel()
+@testable import FitNess
 
-  let dataModel = DataModel()
-  var appState: AppState = .notStarted
+class DataModelTests: XCTestCase {
 
-  func start() throws {
-    guard dataModel.goal != nil else { throw AppError.goalNotSet }
-    appState = .inProgress
+  var sut: DataModel!
+
+  override func setUpWithError() throws {
+    try super.setUpWithError()
+    sut = DataModel()
+  }
+
+  override func tearDownWithError() throws {
+    sut = nil
+    try super.tearDownWithError()
+  }
+
+  func testModel_whenStarted_goalIsNotReached() {
+    XCTAssertFalse(sut.goalReached, "goalReached should be false when the model is created")
+  }
+
+  func testModel_whenStepsReachGoal_goalIsReached() {
+    sut.goal = 1000
+
+    sut.steps = 1000
+
+    XCTAssertTrue(sut.goalReached)
   }
 }

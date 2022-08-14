@@ -22,6 +22,9 @@
 		4CCF44142706844A00DD29AB /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCF44132706844A00DD29AB /* DataModel.swift */; };
 		4CCF44162706846400DD29AB /* Nessie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCF44152706846400DD29AB /* Nessie.swift */; };
 		4CCF44182706849B00DD29AB /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCF44172706849B00DD29AB /* AppError.swift */; };
+		C87BAD9328A46F8300E265B3 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87BAD9228A46F8300E265B3 /* ViewControllers.swift */; };
+		C87BAD9628A4702100E265B3 /* RootviewController+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87BAD9528A4702100E265B3 /* RootviewController+Tests.swift */; };
+		C8DD3F9C28A457A200779C99 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DD3F9B28A457A200779C99 /* DataModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		4CCF44132706844A00DD29AB /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		4CCF44152706846400DD29AB /* Nessie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nessie.swift; sourceTree = "<group>"; };
 		4CCF44172706849B00DD29AB /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		C87BAD9228A46F8300E265B3 /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = SOURCE_ROOT; };
+		C87BAD9528A4702100E265B3 /* RootviewController+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootviewController+Tests.swift"; sourceTree = "<group>"; };
+		C8DD3F9B28A457A200779C99 /* DataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataModelTests.swift; path = "FitNess/Data Model/DataModelTests.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,8 @@
 		4CCF44032705277700DD29AB /* FitNessTests */ = {
 			isa = PBXGroup;
 			children = (
+				C87BAD9428A4700500E265B3 /* TestExtensions */,
+				C87BAD9128A46F5D00E265B3 /* TestClasses */,
 				4CCF440F27052F9C00DD29AB /* Cases */,
 			);
 			path = FitNessTests;
@@ -191,8 +199,25 @@
 		4CCF441A2706879400DD29AB /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				C8DD3F9B28A457A200779C99 /* DataModelTests.swift */,
 			);
 			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		C87BAD9128A46F5D00E265B3 /* TestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C87BAD9228A46F8300E265B3 /* ViewControllers.swift */,
+			);
+			path = TestClasses;
+			sourceTree = "<group>";
+		};
+		C87BAD9428A4700500E265B3 /* TestExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				C87BAD9528A4702100E265B3 /* RootviewController+Tests.swift */,
+			);
+			path = TestExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,7 +361,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8DD3F9C28A457A200779C99 /* DataModelTests.swift in Sources */,
+				C87BAD9628A4702100E265B3 /* RootviewController+Tests.swift in Sources */,
 				4CCF440E27052F8000DD29AB /* StepCountControllerTests.swift in Sources */,
+				C87BAD9328A46F8300E265B3 /* ViewControllers.swift in Sources */,
 				4CCF440C2705284300DD29AB /* AppModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
