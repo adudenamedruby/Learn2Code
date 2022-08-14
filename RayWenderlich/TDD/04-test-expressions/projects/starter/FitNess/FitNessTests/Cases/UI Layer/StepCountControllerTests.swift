@@ -39,14 +39,14 @@ class StepCountControllerTests: XCTestCase {
 
   override func setUpWithError() throws {
     try super.setUpWithError()
-    sut = StepCountController()
     let rootController = getRootViewController()
     sut = rootController.stepController
   }
 
   override func tearDownWithError() throws {
-    sut = nil
     AppModel.instance.dataModel.goal = nil
+    AppModel.instance.restart()
+    sut.updateUI()
     try super.tearDownWithError()
   }
 

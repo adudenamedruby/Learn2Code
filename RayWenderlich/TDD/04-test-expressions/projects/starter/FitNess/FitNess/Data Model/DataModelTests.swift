@@ -59,4 +59,24 @@ class DataModelTests: XCTestCase {
 
     XCTAssertTrue(sut.goalReached)
   }
+
+  func testModel_whenStarted_userIsNotCaught() {
+    XCTAssertFalse(sut.caught)
+  }
+
+  func testModel_whenUserAheadOfNessie_isNotCaught() {
+    sut.distance = 1000
+    sut.nessie.distance = 100
+
+    XCTAssertFalse(sut.caught)
+  }
+
+  func testModel_whenNessieAheadOfUser_isCaught() {
+    sut.nessie.distance = 1000
+    sut.distance = 100
+
+    XCTAssertTrue(sut.caught)
+  }
+
+
 }
