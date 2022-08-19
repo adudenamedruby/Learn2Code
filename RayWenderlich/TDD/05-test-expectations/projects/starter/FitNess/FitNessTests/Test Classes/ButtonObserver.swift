@@ -1,4 +1,4 @@
-/// Copyright (c) 2021 Razeware LLC
+/// Copyright (c) 2022 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -31,49 +31,19 @@
 /// THE SOFTWARE.
 
 import Foundation
+import XCTest
 
-class AppModel {
-  static let instance = AppModel()
-  let dataModel = DataModel()
+class ButtonObserver {
+  var token: NSKeyValueObservation?
 
-  private(set) var appState: AppState = .notStarted {
-    didSet {
-      stateChangedCallback?(self)
-    }
+  func observe(_ button: UIButton, expectation: XCTestExpectation) {
+    token = button
+      .observe(\.titleLabel?.text, options: [.new], changeHandler: { _, _ in
+        expectation.fulfill()
+      })
   }
 
-  var stateChangedCallback: ((AppModel) -> Void)?
-
-  func start() throws {
-    guard dataModel.goal != nil else {
-      throw AppError.goalNotSet
-    }
-
-    appState = .inProgress
-  }
-
-  func pause() {
-    appState = .paused
-  }
-
-  func restart() {
-    appState = .notStarted
-    dataModel.restart()
-  }
-
-  func setCaught() throws {
-    guard dataModel.caught else {
-      throw AppError.invalidState
-    }
-
-    appState = .caught
-  }
-
-  func setCompleted() throws {
-    guard dataModel.goalReached else {
-      throw AppError.invalidState
-    }
-
-    appState = .completed
+  deinit {
+    token?.invalidate()
   }
 }

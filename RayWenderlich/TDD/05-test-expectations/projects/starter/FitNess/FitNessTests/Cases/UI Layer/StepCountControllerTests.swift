@@ -75,6 +75,14 @@ class StepCountControllerTests: XCTestCase {
   }
 
   // MARK: - When
+  func whenCaught() {
+    AppModel.instance.setToCaught()
+  }
+
+  func whenCompleted() {
+    AppModel.instance.setToComplete()
+  }
+
   private func whenStartStopPauseCalled() {
     sut.startStopPause(nil)
   }
@@ -193,5 +201,31 @@ class StepCountControllerTests: XCTestCase {
     // then
     let chaseView = sut.chaseView
     XCTAssertEqual(chaseView?.state, .inProgress)
+  }
+
+  func testController_whenCaught_buttonLabelIsTryAgain() {
+    givenInProgress()
+    let expectation = expectation(description: "button title change")
+    let observer = ButtonObserver()
+    observer.observe(sut.startButton, expectation: expectation)
+
+    whenCaught()
+
+    waitForExpectations(timeout: 1)
+    let text = sut.startButton.title(for: .normal)
+    XCTAssertEqual(text, AppState.caught.nextStateButtonLabel)
+  }
+
+  func testController_whenComplete_buttonLabelIsStartOver() {
+    givenInProgress()
+    let expectation = expectation(description: "button title change")
+    let observer = ButtonObserver()
+    observer.observe(sut.startButton, expectation: expectation)
+
+    whenCompleted()
+
+    waitForExpectations(timeout: 1)
+    let text = sut.startButton.title(for: .normal)
+    XCTAssertEqual(text, AppState.completed.nextStateButtonLabel)
   }
 }

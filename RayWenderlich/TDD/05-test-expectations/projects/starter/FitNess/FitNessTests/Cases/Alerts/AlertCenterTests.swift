@@ -46,4 +46,58 @@ class AlertCenterTests: XCTestCase {
     sut = nil
     try super.tearDownWithError()
   }
+
+  func testPostOne_generatesANofitication() {
+    // Given
+    let expectation = expectation(
+      forNotification: AlertNotification.name,
+      object: sut,
+      handler: nil)
+
+    let alert = Alert("This is an alert")
+
+    // When
+    sut.postAlert(alert: alert)
+
+    // Then
+    wait(for: [expectation], timeout: 1)
+  }
+
+  func testPostingTwoAlerts_generatesTwoNotifications() {
+    let expectation = expectation(
+      forNotification: AlertNotification.name,
+      object: sut,
+      handler: nil)
+
+    expectation.expectedFulfillmentCount = 2
+    let alert1 = Alert("This is an alert")
+    let alert2 = Alert("This is an alert")
+
+    // When
+    sut.postAlert(alert: alert1)
+    sut.postAlert(alert: alert2)
+
+    // Then
+    wait(for: [expectation], timeout: 1)
+  }
+
+  func testPostDouble_generatesOnlyOneNotification() {
+    let expectation = expectation(
+      forNotification: AlertNotification.name,
+      object: sut,
+      handler: nil)
+
+    expectation.expectedFulfillmentCount = 2
+    expectation.isInverted = true
+    let alert1 = Alert("This is an alert")
+
+    // When
+    sut.postAlert(alert: alert1)
+    sut.postAlert(alert: alert1)
+
+    // Then
+    wait(for: [expectation], timeout: 1)
+  }
+
+
 }

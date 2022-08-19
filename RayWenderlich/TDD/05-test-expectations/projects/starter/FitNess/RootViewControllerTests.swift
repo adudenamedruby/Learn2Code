@@ -1,4 +1,4 @@
-/// Copyright (c) 2021 Razeware LLC
+/// Copyright (c) 2022 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -30,50 +30,27 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import XCTest
 
-class AppModel {
-  static let instance = AppModel()
-  let dataModel = DataModel()
+@testable import FitNess
 
-  private(set) var appState: AppState = .notStarted {
-    didSet {
-      stateChangedCallback?(self)
-    }
+class RootViewControllerTests: XCTestCase {
+
+  private var sut: RootViewController!
+
+  override func setUpWithError() throws {
+    try super.setUpWithError()
+    sut = getRootViewController()
   }
 
-  var stateChangedCallback: ((AppModel) -> Void)?
-
-  func start() throws {
-    guard dataModel.goal != nil else {
-      throw AppError.goalNotSet
-    }
-
-    appState = .inProgress
+  override func tearDownWithError() throws {
+    sut = nil
+    try tearDownWithError()
   }
 
-  func pause() {
-    appState = .paused
+  // MARK: - Alert container
+  func testWhenLoaded_noAlertsAreShown() {
+    XCTAssertTrue(sut.alertContainer.isHidden)
   }
 
-  func restart() {
-    appState = .notStarted
-    dataModel.restart()
-  }
-
-  func setCaught() throws {
-    guard dataModel.caught else {
-      throw AppError.invalidState
-    }
-
-    appState = .caught
-  }
-
-  func setCompleted() throws {
-    guard dataModel.goalReached else {
-      throw AppError.invalidState
-    }
-
-    appState = .completed
-  }
 }
