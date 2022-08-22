@@ -31,6 +31,7 @@
 /// THE SOFTWARE.
 
 import Foundation
+import UIKit
 
 // Add the Data Model class here:
 class DataModel {
@@ -52,5 +53,4 @@ class DataModel {
   var caught: Bool {
     return (distance > 0) && (nessie.distance >= distance)
   }
-
 }
