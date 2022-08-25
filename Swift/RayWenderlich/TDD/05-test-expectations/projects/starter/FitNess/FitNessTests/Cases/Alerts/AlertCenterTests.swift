@@ -71,7 +71,7 @@ class AlertCenterTests: XCTestCase {
 
     expectation.expectedFulfillmentCount = 2
     let alert1 = Alert("This is an alert")
-    let alert2 = Alert("This is an alert")
+    let alert2 = Alert("This is an alert!")
 
     // When
     sut.postAlert(alert: alert1)

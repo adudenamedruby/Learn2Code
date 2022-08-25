@@ -53,4 +53,18 @@ class RootViewControllerTests: XCTestCase {
     XCTAssertTrue(sut.alertContainer.isHidden)
   }
 
+  func testWhenAlertsPosted_alertContainerIsShown() {
+    let exp = expectation(
+      forNotification: AlertNotification.name,
+      object: nil,
+      handler: nil)
+    let alert = Alert("show the container")
+
+    AlertCenter.instance.postAlert(alert: alert)
+
+    wait(for: [exp], timeout: 1)
+    XCTAssertFalse(sut.alertContainer.isHidden)
+    t
+  }
+
 }
