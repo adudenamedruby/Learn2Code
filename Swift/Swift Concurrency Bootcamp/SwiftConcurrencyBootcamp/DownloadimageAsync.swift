@@ -47,6 +47,23 @@ class DownloadImageAsyncImageLoader {
             completion(image, error)
         }.resume()
     }
+    
+    @available(*, renamed: "downloadWithEscaping()")
+    func downloadWithEscaping() async throws -> UIImage {
+        return try await withCheckedThrowingContinuation { continuation in
+            downloadWithEscaping() { result, error in
+                if let error = error {
+                    continuation.resume(throwing: error)
+                    return
+                }
+                guard let result = result else {
+                    fatalError("Expected non-nil result 'result' for nil error")
+                }
+                continuation.resume(returning: result)
+            }
+        }
+    }
+    
 
     func downloadWithEscaping() async throws -> UIImage {
         return try await withCheckedThrowingContinuation { continuation in
