@@ -1,5 +1,0 @@
-# Coin-Toss
-
-## Usage
-
-## Installation
