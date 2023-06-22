@@ -64,3 +64,22 @@
 (defun e417 (x y)
   (cond ((and (or (equal x 'boy) (equal x 'girl)) (equal y 'child)) t)
         ((and (or (equal x 'woman) (equal x 'man)) (equal y 'adult)) t)))
+
+;; 4.18
+(defun e418 (x y)
+  (cond ((equal x y) 'tie)
+        ((or (and (equal x 'rock)
+                  (equal y 'scissors))
+             (and (equal x 'scissors)
+                  (equal y 'paper))
+             (and (equal x 'paper)
+                  (equal y 'rock)))
+         'first-wins)
+        (t 'second-wins)))
+
+;; 4.22
+(defun boilingp (temp scale)
+  (cond ((equal scale 'farenheight) (> temp 212))
+        ((equal scale 'celsius) (> temp 100))))
+
+(step (if (oddp 5) 'yes 'no))
